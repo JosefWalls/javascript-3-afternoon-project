@@ -11,25 +11,25 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These', 
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 
@@ -39,8 +39,10 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+function showValues(){
+  for(let value in showValues){
+    let newArray = 
+  }
 }
 
 
@@ -55,7 +57,13 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function greaterThan10(object){
+  for(let value in object){
+    if (object[value] > 10){
+      object[value] = 0;
+    }
+    } return object;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -66,7 +74,11 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double(object){
+  for(let value in object){
+    object[value] = object[value]* 2;
+  } return object;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -80,7 +92,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function secrets(objects){
+  let newSentence = ""
+  for(let value in objects){
+    if(objects[value].indexOf(0, 1) === "sh"){
+      newSentence.push(objects[value])
+    }
+  } return newSentence;
+}
 
 
 /* 
@@ -111,7 +130,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function removePassword(obj){
+  for(let key in obj){
+    if(key === "password"){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -130,7 +156,11 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+for (var key in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[key] > 100){
+    delete deleteTheBigNumbers[key]
+  }
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -143,8 +173,13 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
-
+function startsWithK(object){
+  for(let key in object){
+    if(object[key].indexOf(0) === "k"){
+      delete object[key]
+    }
+  }
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -159,4 +194,12 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-
+function hiddenTreasure(object){
+  for(let value in object){
+    if(object[value].includes('treasure')){
+      console.log("aye aye aye")
+    } else {
+      delete object[value]
+    }
+  } return object;
+}

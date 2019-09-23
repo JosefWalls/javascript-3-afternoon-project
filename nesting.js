@@ -49,11 +49,20 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
 //Code Here
+function employeeUpdater(){
+  for(let i = 0; i < employees.length; i++){
+    if(employees[i].firstName === "Theo"){
+      delete employees[i];
+    } else if (employees[i].firstName === "Lorie"){
+      employees[i].department = "HR";
+    } else {
 
+    }
+  } return employees;
+};
 
-
+console.log(employees)
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -69,8 +78,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
-
+function removeDuplicates() {
+  for (let i = 0; i < workplaceAccidents.length; i++ ) {
+    for (let b = workplaceAccidents.length - 1; b > i; b--) {
+      if (workplaceAccidents[i] === workplaceAccidents[b]) {
+        workplaceAccidents.splice(b, 1);
+      }
+    }
+  }
+  return workplaceAccidents;
+ }
 
 ////////// PROBLEM 3 //////////
 
@@ -95,10 +112,9 @@ var cat = {
     1. Assign the value of Grumpy's 2nd activity to the grumpyActivity variable below.
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
-
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -139,7 +155,15 @@ var myCar = {
 */
 
 //Code Here
-
+function recordCleaner(){
+  for(let i = 0; i < myCar.length; i++){
+    if(myCar[i].atFaultForAccident === true){
+      myCar[i].atFaultForAccident = false;
+    } else {
+      
+    }
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -158,5 +182,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+function looper (){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[j] % 2 === 0){
+        return numsArr[j] === "odd"
+      } else {
+        return numsArr[j] === "even"
+      }
+    }
+  }
+}
 
+console.log(numsArr)
 
