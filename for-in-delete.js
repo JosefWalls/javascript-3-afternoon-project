@@ -39,11 +39,6 @@ for(var key in values) {
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues(){
-  for(let value in showValues){
-    let newArray = 
-  }
-}
 
 
 
